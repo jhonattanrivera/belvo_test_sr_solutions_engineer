@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belvo Widget</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.belvo.io/belvo-widget-1-stable.js"></script>
+</head>
+<body>
+    <div id="belvo"></div>
+
+    <div id="overlay">
+        <button id="startbutton">Connect your account!</button>
+    </div>
+
+    <div class="left"></div>
+    <div class="main_bg"></div>
+    <div class="main">
+    <div class="nav">
+        <div class="window_operation">
+        <div class="red"></div>
+        <div class="yellow"></div>
+        <div class="green"></div>
+        </div>
+        <div class="menu">
+        <div class="item selected">
+            <svg viewBox="0 0 576 512" width="100" title="home">
+            <path fill="#a8a8a8" d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z" />
+            </svg>
+        </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="content_header">
+        <div class="name">
+            <div class="title">Dashboard</div>
+            <div class="info">Payments updates</div>
+        </div>
+        </div>
+        <div class="detail">
+        <div class="quicklinks">
+            <div class="quicklink">
+            <div class="header">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAAEbUlEQVR4nO3abYgVZRTA8V+7apaWa8lasaVk2NuHzKCyIHypUCn8YFRGRgWhSawfiggiyKBIe0GI6kNJb0KUJESBvVpRkRFGEZaBZWVamZmFKZm2fTizsF3vnbn37t25d3H+cJndec6ZOXPmmfOcc2YoKCgoKCgoKDhEOazC/qG4BrNxTH7m1M0evIsnsLsWxXIOGIU1mIJt+BoH+mngQDMeE/ANLsb3/TnYSvyD6/tvV67MwC58oPLMzmQM9mN5g4zKm270YFK1Cm0l/09EO95qoFF5sjbZnlGtQqkDhiXbmgJJC9Fr97BUqT6UOuCQY0iF/eekjLUyY2tVqHSRD/bTkEFDJQfchs/zNKRBjBXLeNVUcsB6kVkNNsbXqnDIB8HCAc02oNlUigHv5GpFE6nkgOfxQ56GNIhRWNifA0wVxcTUhpiTP+OF/VVXsoMp22vH6ejCcRguGiEb8QX21nPQweCA6aI7dTk6K8jsFXnL67UevJUdMBnLRKPjT6wW5e4mbMaR4pmfILpAMzEr0e2q96StEgNuFY2ZX3CTmO5ZtGEeNohreLJKvf/RbAe0Y0ViwzPoqCA3S+WmRzuW4l+8J2ZJ1TTbAQ8k518iva+3SdzhNOZiH94WXe6qaKYDrkvOvTRDbhJ+xceYJt1RNybHfLhaI5rlgNHYKYJcpcDcLvr+PSW/NdLfXSwXbf3zqzGkWQ5YJoLexBSZh8SF3IsTcCwWiT7gmhS9o7FdPAqZNMMBI0VC83SKTKdY6x8tM7ZQ2DwtRX9xIjO5dKAVqsGZOAKPp8icK5a0F8uMvSAubkqK/koxw64uHWgFB8zBDnySIrMv2R5eZux33IXXUvR/w/u4NMuYs4U352cJNpDP8FKGTAf+EtlgvdwjHJmaHA0Vd2Otfrxfq5Htyj/bpdwibs5qkfp2qc3GBYl+Zt9wUSK4Cmca2MdkiMjYllQpv1jUBb1L4FbcXKXunETnrGqE78TfDl5zB+qXlfz0pUOkwt3iue4R0zuL+YnsuL4706bQieIDiS41pJJ1sEAEsHl16LbhOVyJ08T3AZW4A/eJGLAvRS53XsGnGTIjcK3yN2yCuLPdGcd4Fj+W7myFZXCdyO/HpchcKO70QYkMfhIOqFQ5ErFmtjINk1ZwQO/SdkWKzEZxkbPKjM0QM2NDiv40kTq/XI+BefCmiOgjUmRWiZR5bp9952GLePbLJUm9fJjI1dwgyYvpspfDMfhIzISf8W3y9zbpS9vcRO6Ghlg6gKwQ0XlGiswwXCVygU2idTY6Rf4UkQavF+V0S9MhPsnbKRKwNDbjqQyZTnwpMs2a3xo3i5PEN367cFmK3Ku4PWV8Er4T9cNFDbMuJ04WecEBPCZeglTLSNwtLnyL8svmoGA4HhE1/G5RLF2ifEbaJnoB94vg2COqy+NzsXSAOVVkcL11yR58Jd4CvSHW/j+Ssf3JvgtqOUFeJW9/OUqUwNNFnOgUK8JWsQyuE3FhR7MMLCgoKCgoKCgYdPwHiBL8xqGghOkAAAAASUVORK5CYII="/>
+            </div>
+            <div class="title">Transfer via Card Number</div>
+            <div class="amount">$****</div>
+            </div>
+            <div class="quicklink">
+            <div class="header">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAA/klEQVRoge3ZvUrEQBRA4c/FPou2Fr6BL+ML2tkLNmtn4w+7CtpZWIqlL7CxCEFQGzO73NnrHEh/Tpi5XBLq5ByX6KJFSlmix60djznCiyFmiYNYnTLSxqy0mHr4HnMYq1NG2pgHLaYefsTs4REnkVYbYDXDOtriP5PinqQYwy2iFlLsWynW+RZRCyki4NkfPz7sb1VnOu94wyk+gl0aW6fDBc6iRUroDBevx32wy2Q63BgiXnEcqzONNBHjcWoRkcy1iDqY406LiCdFBF//63b5uZ5t/LXE0JPoaJFk7I60mFpJsWeNpFjfR1pMraSLGQfAU7BLMR0WuIoW+Y1PPZWtYLawmZQAAAAASUVORK5CYII="/>
+            </div>
+            <div class="title">Transfer Other Banks</div>
+            <div class="amount">$****</div>
+            </div>
+            <div class="quicklink">
+            <div class="header">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAADqElEQVR4nO3aW4hVZRTA8d+MM6OjNpfAytIeErIiKUipqJeiG0YWJBEEQUQ+ZBZBEQRG0FNgQRBGUELRS0FPWVBQPRQRXSgKs7sWGhU4Gowyg3R5WHvodNr77H3O2eeG+w+bOWev9a299jrfZX3rGyoqKioqKioqKipOSBb1+PkrMYK5HvvRdc7HC/ge+/EEVvfUoy5xOV7D57gdo1iGLdibyDb0zLsOMYwb8AHeTz4PNdD7MEdvYFji31/2FaxP0RmRPg9dhTfxKW5N9AaGaTyMfdiJNSk6E3gAP+BbbBNDoZ4L8FKic2+GTt9wGh7FT3gKp6fonFKns0qsBHntitjuGevwLL7BQ5hM0VkjHN8nXmQ6RWcC94le8SLObVGna6TN6PVcJBz9Wji+pIDdscTel4n9y1rU6QjD2IyP8DaulT1TX4pDmGnzOoSLG/hzo1g13sOm5F7pLBYR3yMifkknHtIm9b1tvAyjC2Pux8T42jKMdpiz/He+ObkVI/Uz88qyvOsiK8Q77BfvcGaaUtr4vUIkIaP4Fcc65GC3WCqW0eNiznq3Vpg1gdUuU4+Jmf7VTnjXQW7Ghdhec+9wvVJWilmrOIejaY37nKPC94Z+d2TJGCRO+AAU3WVdiZM66UgH2IA/8pSKlMQOi/x+PLlW4y58VXOv/tomMri/6u5vEhugmYx2K3A/vkiRbReJ2FhG22twDn5Pvs9gN35p9HJFesDHybXA2dgokqMs5vCcqAXUMi6WpKy2k/gNj6fI7hTJzXxG2/PE3mBHA7/+RyuFhgP4DI/g9RT5RvEL/pwie0MEZlq8TD1bcU/Gc3fgGTyP25K/C6wVPfPJfPfL4WpR1FyVItslEo4sduG6DNnBnOceFMHbU3d/s8j2mqbdVeBlnNGmjZ7SbgCG9f5soS3aDcB3mC3DkV7RbrX1DvxZhiO9ot0e8BZOLcORJpgVK0kptBuApaJa1E2Oi+JMKQziXmAC75RlbBADsEiJJ0WDGIBjIqMshUEMwDweLMvYIAagVJoZS6NYnnxeLmb/EbGDq60hLk7kacdfefLhBu0ayZeJU6cF2axYLXJp5vz9abHJyS0y9JhJkZ9sLaLcTA8YE8WK3S041U2ux01FlYsE4BZMiZPYeX12NJ3COlEZ2oIj4p8zMskbAkOiy+8sxbXuc7cYEn+3amBIVIAGlQNyfuQiQ2BKTjfqY6byFIqsAuuLGOpTjuCTXjtRUVFRUVFRUVFR0Yf8AyT9r6WKvjtpAAAAAElFTkSuQmCC"/>
+            </div>
+            <div class="title">Transfer Same Bank</div>
+            <div class="amount">$****</div>
+            </div>
+            <div class="quicklink">
+            <div class="header">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAADY0lEQVR4nO2avWsUQRTAfzHXaMgJ6XJ2KUQE/wJBEOy8FBLSWARR1CDamlgbxMY/IFXAv8HCJl4gEfEDCxH8AButRAtNRAkWazEz7DiZ3Z3Zr7nb2x8Mt7szO/Pe23lv3s4etLS48hSIGlJ2lFITHgaIPNqOAhMAnbw3jjD/PchDoaQYFtIMYPq8IrT/FvJ5k7Tp3EifJ9bLOQY0yudN2higHY+Fz5vo03ssfN48t8WARvu8SRsDPNsPw/uAs3+7YIsBSS5wFPhR5uAF6AJ7CXWpPm+e+8yAc/L3hbw5RNkyZCkVc/nTmQE+yvqbVQzuyHUpw3spk42kZTzpPLWiCywQK79NvjfIsuggYkAEfAEWETLqlGYAM+BtA7M5BZ8HBsAvWZ4A/Zx99YiNYAuMpRlAnT9HTPu8T/6eIaxe1nL22QFuSdl8FfY2QBHmZR/7wG3E0+sBK/JaRP6ZoBhqAwxkHyuWulVZt1lwjKE2wJ7swxY7ZmXdbsExChmgrlTYllypsYsauRBVG+Cl/F2y1KlrryqWwZkqXKBPHARXEQHwGHCHOAieLzhG5TFgC5GB5V0G17S+zHI3Z58dYFnKVpkBbMlGL6fAfUS035Nlk/xPvoc9SVMkKWyWA9gqpoELiNxbGSF0KqyU/4xI06eNNi4G2MZCms/PIHLvCJGBhWKZWPm8L0OJZDVcJE6NQ6F8fiGljZcBfDZEusDPbBlrwWVDxMSql08esIvwv9DskKx82j2ZlLHuDwNeeoz9rrBtSWvCLHDG/DTWFErdOm9paRlqBsBr4GRoQUKh1v3fwLXAsgTBfNN7CEwFlahmlOJLiI8uEfAOOBVSqDrRU98TwBtil7jq05Ht239SQuHaNqtdmf83UEwBG9r1DeCIiwGct4482ma1K0t52w7PJWKXeIvDKuGzkeDaNqtd1W+gXi7RRAMAHAbWtbESV4mmGkChu8QzdXGc9gM+AX/ksXV7rMkz4CJC+Qh4jPjD1wGaaIBJ4L42zjop3zVGeRm05SBd4JGs3weuJCmuMD+FJa2vPm2z2tnq8xadOcTaHwHfgDNZyo8ypgFOA1/ltQ/A8RBC1YlugMvEn90Tg13TUAZ4YBxPhhSqTvQ48Be4EVac+lHKfwfOBpYlCAPEH7jnQgvSMor8Axeg1gmib2tXAAAAAElFTkSuQmCC"/>
+            </div>
+            <div class="title">Transfer to Other Bank</div>
+            <div class="amount">$****</div>
+            </div>
+        </div>
+        <div class="history">
+            <div class="name">
+            <div class="title">History</div>
+            <div class="info">The last 10 transactions:</div>
+            <div class="info" id="linkid"></div>
+            </div>
+            <div class="transections">
+
+
+                <div id="transactions">
+                    <table id="transactionsTable">
+                        <thead>
+                            <tr>
+                                <th>Account Name</th>
+                                <th>Amount</th>
+                                <th>Currency</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Las transacciones se llenarán aquí con JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+            <button id="trxbutton">See results!</button>
+
+            <div class="selected_bg"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="activities">
+        <div class="header">
+        <div class="user">
+            <div class="avatar"></div>
+            <div class="arrow">
+            <svg viewBox='0 0 60 60' stroke='#a8a8a8' stroke-width='8' fill='none'><path d='M 5,5 L 30,30 L 5,53'/></svg>
+            </div>
+        </div>
+        </div>
+        <div class="activities_content">
+        <div class="credit_card">
+            <div class="chip">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAADkUlEQVRoge2au28UVxTGv7tiLRzRE8EuKCkAQ0IoeDQxokgEwUgg0VDxZ0CIqKJ0iDcycpqIV5kiD4mHEqQ82jQoEYgCR0llqBKSJbaxfxRzZvdq2fHeO3cxq2i+ZnZ2znfO9829Mzt77kgVKlRYCq7oADAm6bCkvZLekrRa0opl0pVjXtJjSdOSbkn60jn3IIgJrAOuAwsMHxaAa0Cjn4ndwBMjtYApYB+wFlju0RCwwmp/ZFpapu0xMF5E2g3MWuBXfV2/BgAN4GvTOPuSGbLplI/EOaD2mrT2BVADznsj0/APXvdGYmhN5DAz+chcyb8cs4uo1T2dgBHgQY+L7inwPTAxQHEHLOc/wE8B8U3TvABsFHDSxE31CB4B7vcw4uPTAZj4rCvnj4G8zy3+EwE/286+iMJrgON0bg77E0wcsByzwDFgTQR3f9s48KftRN+lzAzAd7FcL8ddy3G8BLdp3D8EzNlO9O+EjQzAX7FcL8ffliN4JDxu3bhzNUl1SXLOPS8rRtLcALjEEp1z8/axnnqrPWrbXxJy5NyjS0b1Q36biOSs9i72ReCDhPofWo5Zy/lmJD/TTxoWgY/LmvDEnLBcpZFqZE+qCc/MnhQhDrJp5Zwr/G/So2g051XlzTlD/1wVisrIsKEyMmyojAwbKiPDhraRmMcBj3MReC9VBLANuJiiJfVZC7I//5eBlSUMjJI13pK7mmUf498AdgKn6XT/7saYMRM/GLcFnAK2A6ORWsob6Uo0BkxbmskI3pRxHgGbEuoPxogl22xndRF4NyB+m8X+S9b1T6ndNlK6+dCV8IzluRQQO2mxpxJrtpsPSe2grqQ7Lc9vAbF50297Ys12O6gm6Xf7vu+U6IP7tl0fENu0bdiiTTG22na6Jum27RxKTJpjYUAxITho29sCNlHQxI4BsMuG+V5A7K8WuyOhXhN4Zto31GxN7oakUUmTlF9WOGLbOwGx+Sw4smRUAUzjZUkrJV11zj3MDzTIFk0gW0SJMgNssbMzD2wJiH8HeG6zYHOsCeCCaZ2hu9UKjNPprn8DNAty9TKR/yCejRCUrzpNh5qx6fSt8f4D3i8KHPdGpkW2/jBhI1b34lbZNXHWRgLgph8TIGoEuOXVOmM5V3kxdas9YVryWjOFJjxyA7jC8C5Pf0GPzv1SLwxsVOeFgbeVvTAQfMYHhHlJM5IeqfPCwMNl1lChwv8CLwAafZFLEXFnOQAAAABJRU5ErkJggg==">
+            </div>
+            <div class="number">**** **** **** ****</div>
+            <div class="bottom">
+            <div class="logo_lane">
+                <div class="info"></div>
+                <div class="logo">
+                <div class="logo_right"></div>
+                <div class="logo_left"></div>
+                </div>
+            </div>
+            <div class="name_lane">
+                <div class="title"></div>
+                <div class="card_type">Mastercard</div>
+            </div>
+            </div>
+        </div>
+        <div class="recent_activities">
+            <div class="header">
+            <div class="title" id="owneraccount">Owner account...</div>
+            <div class="info" id="owneraccountdetails">details...</div>
+            </div>
+
+            <div id="accounts">
+                <table id="accountsTable">
+                    <thead>
+                        <tr>
+                            <th>Your accounts!</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las transacciones se llenarán aquí con JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="main_right_end"></div>
+    </div>
+    <div class="right"></div>
+    <div class="right_end"></div>
+
+
+
+
+</body>
+<script src="script.js"></script>
+</html>
